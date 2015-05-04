@@ -19,7 +19,7 @@ int main(int argc, char* argv[]){
 
 //Actually calculate prime factors
 void returnFactorization(int inputNumber){
-	for(int i = 2; i <= inputNumber; i++){
+	for(int i = 2; i * i <= inputNumber; i++){
 		//printf("%d / %d = %d\n", inputNumber, i, (inputNumber % i));
 		if(inputNumber % i == 0){
 			printf("%d ", i);
@@ -27,4 +27,6 @@ void returnFactorization(int inputNumber){
 			break;
 		}
 	}
+	if (inputNumber > 1)
+		printf("%d ", inputNumber);
 }
