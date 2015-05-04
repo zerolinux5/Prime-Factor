@@ -24,7 +24,7 @@ void returnFactorization(int inputNumber){
 		if(inputNumber % i == 0){
 			printf("%d ", i);
 			returnFactorization(inputNumber / i);
-			break;
+			return;
 		}
 	}
 	if (inputNumber > 1)
